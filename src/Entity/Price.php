@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PriceRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -26,6 +28,16 @@ class Price
      * @ORM\Column(type="integer")
      */
     private $price;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Book::class, mappedBy="price")
+     */
+    private $Books;
+
+    public function __construct()
+    {
+        $this->Books = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -52,6 +64,37 @@ class Price
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Book[]
+     */
+    public function getBooks(): Collection
+    {
+        return $this->Books;
+    }
+
+    public function addBook(Book $book): self
+    {
+        if (!$this->Books->contains($book)) {
+            $this->Books[] = $book;
+            $book->setPrice($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBook(Book $book): self
+    {
+        if ($this->Books->contains($book)) {
+            $this->Books->removeElement($book);
+            // set the owning side to null (unless already changed)
+            if ($book->getPrice() === $this) {
+                $book->setPrice(null);
+            }
+        }
 
         return $this;
     }

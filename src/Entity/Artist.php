@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ArtistRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,16 @@ class Artist
      * @ORM\Column(type="string", length=255)
      */
     private $picture;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Skill::class, inversedBy="artists")
+     */
+    private $Skills;
+
+    public function __construct()
+    {
+        $this->Skills = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +115,32 @@ class Artist
     public function setPicture(string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Skill[]
+     */
+    public function getSkills(): Collection
+    {
+        return $this->Skills;
+    }
+
+    public function addSkill(Skill $skill): self
+    {
+        if (!$this->Skills->contains($skill)) {
+            $this->Skills[] = $skill;
+        }
+
+        return $this;
+    }
+
+    public function removeSkill(Skill $skill): self
+    {
+        if ($this->Skills->contains($skill)) {
+            $this->Skills->removeElement($skill);
+        }
 
         return $this;
     }

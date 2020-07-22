@@ -27,6 +27,11 @@ class Book
      */
     private $numberOfPersons;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Price::class, inversedBy="Books")
+     */
+    private $price;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Book
     public function setNumberOfPersons(int $numberOfPersons): self
     {
         $this->numberOfPersons = $numberOfPersons;
+
+        return $this;
+    }
+
+    public function getPrice(): ?Price
+    {
+        return $this->price;
+    }
+
+    public function setPrice(?Price $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }
