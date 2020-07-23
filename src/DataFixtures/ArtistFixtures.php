@@ -6,6 +6,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Artist;
+use App\Entity\Skill;
 
 class ArtistFixtures extends Fixture
 {
@@ -85,3 +86,4 @@ class ArtistFixtures extends Fixture
         $manager->flush();
     }
 }
+

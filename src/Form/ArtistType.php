@@ -3,7 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Artist;
+use App\Entity\Skill;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,8 +20,10 @@ class ArtistType extends AbstractType
             ->add('age')
             ->add('description')
             ->add('picture')
-            ->add('Skills')
-        ;
+            ->add('Skills', EntityType::class, [
+                'class' => Skill::class,
+                'choice_label' => 'title',
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

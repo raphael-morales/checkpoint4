@@ -16,13 +16,6 @@
         <div>
             <img src="{{ artist.picture }}" alt="">
         </div>
-        <div>
-            {% for skills in artist.skills %}
-                <ul>
-                    <li>{{ skills }}</li>
-                </ul>
-            {% endfor %}
-        </div>
         <div class="description-artist">
             <p>{{ artist.description }}</p>
         </div>
