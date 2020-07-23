@@ -5,38 +5,28 @@
 {% block body %}
     <h1>Artist</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ artist.id }}</td>
-            </tr>
-            <tr>
-                <th>Firstname</th>
-                <td>{{ artist.firstname }}</td>
-            </tr>
-            <tr>
-                <th>Lastname</th>
-                <td>{{ artist.lastname }}</td>
-            </tr>
-            <tr>
-                <th>Age</th>
-                <td>{{ artist.age }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ artist.description }}</td>
-            </tr>
-            <tr>
-                <th>Picture</th>
-                <td>{{ artist.picture }}</td>
-            </tr>
-        </tbody>
-    </table>
-
     <a href="{{ path('artist_index') }}">back to list</a>
 
     <a href="{{ path('artist_edit', {'id': artist.id}) }}">edit</a>
+
+    <div class="show-artist">
+        <div>
+            <h1>{{ artist.firstname }} {{ artist.lastname }}, {{ artist.age }}</h1>
+        </div>
+        <div>
+            <img src="{{ artist.picture }}" alt="">
+        </div>
+        <div>
+            {% for skills in artist.skills %}
+                <ul>
+                    <li>{{ skills }}</li>
+                </ul>
+            {% endfor %}
+        </div>
+        <div class="description-artist">
+            <p>{{ artist.description }}</p>
+        </div>
+    </div>
 
     {{ include('artist/_delete_form.html.twig') }}
 {% endblock %}
