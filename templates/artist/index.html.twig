@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artistes{% endblock %}
+
+{% block body %}
+    <h1>Les Artistes</h1>
+        <div class="card-artist">
+        {% for artist in artists %}
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ artist.picture }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="{{ path('artist_show', {'id': artist.id}) }}" class="card-text">{{ artist.firstname }} {{ artist.lastname }}</a>
+                        <div>
+                            <a href="{{ path('artist_edit', {'id': artist.id}) }}">edit</a>
+                        </div>
+                    </div>
+                </div>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </div>
+        </tbody>
+    </table>
+
+    <a href="{{ path('artist_new') }}">Create new</a>
+{% endblock %}
