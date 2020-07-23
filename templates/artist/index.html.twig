@@ -1,41 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Artist index{% endblock %}
+{% block title %}Artistes{% endblock %}
 
 {% block body %}
-    <h1>Artist index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age</th>
-                <th>Description</th>
-                <th>Picture</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h1>Les Artistes</h1>
+        <div class="card-artist">
         {% for artist in artists %}
-            <tr>
-                <td>{{ artist.id }}</td>
-                <td>{{ artist.firstname }}</td>
-                <td>{{ artist.lastname }}</td>
-                <td>{{ artist.age }}</td>
-                <td>{{ artist.description }}</td>
-                <td>{{ artist.picture }}</td>
-                <td>
-                    <a href="{{ path('artist_show', {'id': artist.id}) }}">show</a>
-                    <a href="{{ path('artist_edit', {'id': artist.id}) }}">edit</a>
-                </td>
-            </tr>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ artist.picture }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="{{ path('artist_show', {'id': artist.id}) }}" class="card-text">{{ artist.firstname }} {{ artist.lastname }}</a>
+                        <div>
+                            <a href="{{ path('artist_edit', {'id': artist.id}) }}">edit</a>
+                        </div>
+                    </div>
+                </div>
         {% else %}
             <tr>
                 <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
+        </div>
         </tbody>
     </table>
 
