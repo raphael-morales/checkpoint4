@@ -35,7 +35,7 @@ class Artist
     private $age;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @ORM\Column(type="string", length=5000)
      */
     private $description;
 
