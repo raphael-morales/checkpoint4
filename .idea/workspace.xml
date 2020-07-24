@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a986bec4-710a-4681-b739-a462c77fe157" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ArtistType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArtistType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SkillType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SkillType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artist/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artist/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artist/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artist/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artist/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/artist/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/_accueil.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/_accueil.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
