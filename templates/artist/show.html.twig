@@ -3,23 +3,26 @@
 {% block title %}Artist{% endblock %}
 
 {% block body %}
-    <h1>Artist</h1>
-
-    <a href="{{ path('artist_index') }}">back to list</a>
-
-    <a href="{{ path('artist_edit', {'id': artist.id}) }}">edit</a>
+    <h1 class="text-white">Artiste</h1>
 
     <div class="show-artist">
         <div>
-            <h1>{{ artist.firstname }} {{ artist.lastname }}, {{ artist.age }}</h1>
+            <h1 class="text-white mb-5">{{ artist.firstname }} {{ artist.lastname }}, {{ artist.age }} ans</h1>
         </div>
         <div>
             <img src="{{ artist.picture }}" alt="">
         </div>
         <div class="description-artist">
-            <p>{{ artist.description }}</p>
+            <p class="mt-5 w-75 text-white">{{ artist.description }}</p>
         </div>
     </div>
+    <a href="{{ path('artist_edit', {'id': artist.id}) }}">
+        <button class="btn btn-light ml-5 mt-5">
+            Modifier l'artiste
+        </button>
+    </a>
+        {{ include('artist/_delete_form.html.twig') }}
+    <div class="space">
 
-    {{ include('artist/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
