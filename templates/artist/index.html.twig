@@ -3,15 +3,21 @@
 {% block title %}Artistes{% endblock %}
 
 {% block body %}
-    <h1>Les Artistes</h1>
-        <div class="card-artist">
+    <h1 class="text-white mb-5">Les Artistes</h1>
+    <main class="container">
+        <div class="card-artist row">
         {% for artist in artists %}
-                <div class="card" style="width: 18rem;">
+                <div class="card mt-5 ml-5" style="width: 18rem;">
                     <img src="{{ artist.picture }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <a href="{{ path('artist_show', {'id': artist.id}) }}" class="card-text">{{ artist.firstname }} {{ artist.lastname }}</a>
+                        <a href="{{ path('artist_show', {'id': artist.id}) }}" class="card-text font-weight-bold ">{{ artist.firstname }} {{ artist.lastname }}</a>
                         <div>
-                            <a href="{{ path('artist_edit', {'id': artist.id}) }}">edit</a>
+                            <a href="{{ path('artist_edit', {'id': artist.id}) }}">
+                                <button class="btn btn-outline-primary mt-2">
+                                    Modifier
+                                </button>
+                            </a>
+                            {{ include('artist/_delete_form.html.twig') }}
                         </div>
                     </div>
                 </div>
@@ -24,5 +30,13 @@
         </tbody>
     </table>
 
-    <a href="{{ path('artist_new') }}">Create new</a>
+    <a href="{{ path('artist_new') }}">
+        <button class="btn btn-light mt-5" id="btn-edit">
+            Ajouter un artiste
+        </button>
+    </a>
+    <div class="space">
+
+    </div>
+    </main>
 {% endblock %}

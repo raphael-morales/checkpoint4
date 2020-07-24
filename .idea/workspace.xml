@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a986bec4-710a-4681-b739-a462c77fe157" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/SkillFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkpoint4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkpoint4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ArtistFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ArtistFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ArtistType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArtistType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/SkillType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SkillType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +158,8 @@
       <option name="presentableId" value="Default" />
       <updated>1595524484457</updated>
       <workItem from="1595524488778" duration="461000" />
-      <workItem from="1595537781720" duration="2568000" />
+      <workItem from="1595537781720" duration="3494000" />
+      <workItem from="1595576285279" duration="4251000" />
     </task>
     <servers />
   </component>
@@ -171,5 +175,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1595538991163" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1595580662136">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1595580662136" />
   </component>
 </project>

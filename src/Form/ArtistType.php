@@ -22,7 +22,12 @@ class ArtistType extends AbstractType
             ->add('picture')
             ->add('Skills', EntityType::class, [
                 'class' => Skill::class,
-                'choice_label' => 'title',
+                'choice_label' => function (Skill $skill) {
+                    return $skill->getTitle();
+            },
+                'expanded' => true,
+                'multiple' => true,
+                'by_reference'=> false,
             ]);
     }
 

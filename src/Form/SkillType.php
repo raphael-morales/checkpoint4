@@ -18,7 +18,9 @@ class SkillType extends AbstractType
             ->add('artists', EntityType::class, [
                 'class' => Artist::class,
                 'choice_label' => 'firstname',
-                'multiple' => 'true',
+                'expanded' => true,
+                'multiple' => true,
+                'by_reference'=> false,
             ]);
         ;
     }
